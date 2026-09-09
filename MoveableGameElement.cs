@@ -9,11 +9,17 @@ public class MoveableGameElement : Panel
     public static List<MoveableGameElement> gameElements = new List<MoveableGameElement>();
     public int _xMovingPixel;
     public int _yMovingPixel;
+    public static Color _backColor;
+    public static Size _size;
 
-    public MoveableGameElement(int xMovingPixel, int yMovingPixel)
+    public MoveableGameElement(int xMovingPixel, int yMovingPixel, Color color, Size size)
     {
         _xMovingPixel = xMovingPixel;
         _yMovingPixel = yMovingPixel;
+
+        _backColor = color;
+        _size = size;
+
         gameElements.Add(this);
     }
 
